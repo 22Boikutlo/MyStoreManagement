@@ -140,17 +140,7 @@ namespace MyStore
                 lblLowcase.ForeColor = Color.Green;
             }
         }
-        public Boolean checkUpper(string _strInput)
-        {
-            foreach(char c in _strInput)
-            {
-                if(char.IsUpper(c))
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
+       
 
         private void lblUpperCase(object sender, EventArgs e)
         {
@@ -163,6 +153,98 @@ namespace MyStore
             {
                 MessageBox.Show("Your password should consist of uppercase", "Uppercase Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            Boolean _boolUpperCase = checkUpper(txtPassword.Text);
+            if (_boolUpperCase == true)
+            {
+                lblUpCase.ForeColor = Color.Green;
+            }
+            else
+            {
+                MessageBox.Show("Your password should consist of uppercase", "Uppercase Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            ////////////////////////////
+            Boolean _boolLowerCase = checkUpper(txtPassword.Text);
+            if (_boolLowerCase == false)
+            {
+                MessageBox.Show("Your password should consist of lowercase", "Lowercase Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                lblLowcase.ForeColor = Color.Green;
+            }
+            //////////////////////////////////////
+            Boolean _boolCharChecker = _ConnectOpener.charCheck(txtPassword.Text);
+            if (_boolCharChecker == false)
+            {
+                MessageBox.Show("The password should atleast have 1 special character.", "Characters Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                lblSpecialChar.ForeColor = Color.Green;
+            }
+            /////////
+            Boolean _boolInputPassowrd = ContainsNums(txtPassword.Text);
+            if (_boolInputPassowrd == true)
+            {
+                MessageBox.Show("The password should atleast have 1 numeric character.", "Numbers Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                MessageBox.Show("The password should atleast have 1 numeric character.", "Numbers Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            ////////
+            int _intLength = lblCreatePassword.Text.Length;
+            if (_intLength < 7)
+            {
+                MessageBox.Show("The password length should be atleast 8 characters.", "Short password", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                lblNumOfCharacters.ForeColor = Color.Green;
+            }
+
+        }
+
+        //private void lblNums_Click(object sender, EventArgs e)
+        //{
+        //    Boolean _boolInputPassowrd = ContainsNums(txtPassword.Text);
+        //    if(_boolInputPassowrd == true)
+        //    {
+        //        lblNums.ForeColor = Color.Green;
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("The password should atleast have 1 numeric character.", "Numbers Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        //    }
+        //}
+        //////
+        ///
+        /// 
+        /// 
+        /// 
+        ///SPECIAL METHODS FOR PASSWORD CONSTRAINTS
+        public Boolean ContainsNums(string _strInput)
+        {
+            return _strInput.Any(char.IsDigit);
+        }
+
+        public Boolean checkUpper(string _strInput)
+        {
+            foreach (char c in _strInput)
+            {
+                if (char.IsUpper(c))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

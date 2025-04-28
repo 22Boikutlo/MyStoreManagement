@@ -259,6 +259,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(304, 22);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtConfirmedPassword
             // 
@@ -284,7 +285,7 @@
             this.lblNumOfCharacters.Size = new System.Drawing.Size(223, 17);
             this.lblNumOfCharacters.TabIndex = 28;
             this.lblNumOfCharacters.Text = "Must Contain at least 8 characters";
-            this.lblNumOfCharacters.Click += new System.EventHandler(this.label4_Click);
+            this.lblNumOfCharacters.Click += new System.EventHandler(this.label4Click);
             // 
             // lblNums
             // 
@@ -294,6 +295,7 @@
             this.lblNums.Size = new System.Drawing.Size(112, 17);
             this.lblNums.TabIndex = 29;
             this.lblNums.Text = "Contain Numeric";
+           //// this.lblNums.Click += new System.EventHandler(this.lblNums_Click);
             // 
             // lblUpCase
             // 
@@ -303,7 +305,6 @@
             this.lblUpCase.Size = new System.Drawing.Size(129, 17);
             this.lblUpCase.TabIndex = 30;
             this.lblUpCase.Text = "Contain Uppercase";
-            
             // 
             // lblLowcase
             // 
@@ -313,7 +314,6 @@
             this.lblLowcase.Size = new System.Drawing.Size(123, 17);
             this.lblLowcase.TabIndex = 31;
             this.lblLowcase.Text = "Contain lowercase";
-
             // 
             // lblSpecialChar
             // 
@@ -323,7 +323,6 @@
             this.lblSpecialChar.Size = new System.Drawing.Size(168, 17);
             this.lblSpecialChar.TabIndex = 32;
             this.lblSpecialChar.Text = "Contain special character";
-            this.lblSpecialChar.Click += new System.EventHandler(this.lblSpecialChar_Click);
             // 
             // frmCustomerInfo
             // 
