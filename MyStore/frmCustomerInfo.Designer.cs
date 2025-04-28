@@ -197,7 +197,7 @@
             this.btnCreateAcc.Location = new System.Drawing.Point(643, 621);
             this.btnCreateAcc.Name = "btnCreateAcc";
             this.btnCreateAcc.Size = new System.Drawing.Size(129, 56);
-            this.btnCreateAcc.TabIndex = 11;
+            this.btnCreateAcc.TabIndex = 13;
             this.btnCreateAcc.Text = "Create";
             this.btnCreateAcc.UseVisualStyleBackColor = true;
             this.btnCreateAcc.Click += new System.EventHandler(this.btnCreateAcc_Click);
@@ -207,7 +207,7 @@
             this.btnBack.Location = new System.Drawing.Point(21, 621);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(129, 56);
-            this.btnBack.TabIndex = 12;
+            this.btnBack.TabIndex = 14;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -258,14 +258,14 @@
             this.txtPassword.Location = new System.Drawing.Point(192, 376);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(304, 22);
-            this.txtPassword.TabIndex = 25;
+            this.txtPassword.TabIndex = 11;
             // 
             // txtConfirmedPassword
             // 
             this.txtConfirmedPassword.Location = new System.Drawing.Point(192, 560);
             this.txtConfirmedPassword.Name = "txtConfirmedPassword";
             this.txtConfirmedPassword.Size = new System.Drawing.Size(304, 22);
-            this.txtConfirmedPassword.TabIndex = 26;
+            this.txtConfirmedPassword.TabIndex = 12;
             // 
             // lblConfirmPassword
             // 
@@ -289,7 +289,7 @@
             // lblNums
             // 
             this.lblNums.AutoSize = true;
-            this.lblNums.Location = new System.Drawing.Point(35, 502);
+            this.lblNums.Location = new System.Drawing.Point(35, 529);
             this.lblNums.Name = "lblNums";
             this.lblNums.Size = new System.Drawing.Size(112, 17);
             this.lblNums.TabIndex = 29;
@@ -298,21 +298,22 @@
             // lblUpCase
             // 
             this.lblUpCase.AutoSize = true;
-            this.lblUpCase.Location = new System.Drawing.Point(35, 529);
+            this.lblUpCase.Location = new System.Drawing.Point(35, 474);
             this.lblUpCase.Name = "lblUpCase";
             this.lblUpCase.Size = new System.Drawing.Size(129, 17);
             this.lblUpCase.TabIndex = 30;
             this.lblUpCase.Text = "Contain Uppercase";
+            
             // 
             // lblLowcase
             // 
             this.lblLowcase.AutoSize = true;
-            this.lblLowcase.Location = new System.Drawing.Point(35, 474);
+            this.lblLowcase.Location = new System.Drawing.Point(35, 502);
             this.lblLowcase.Name = "lblLowcase";
             this.lblLowcase.Size = new System.Drawing.Size(123, 17);
             this.lblLowcase.TabIndex = 31;
             this.lblLowcase.Text = "Contain lowercase";
-            this.lblLowcase.Click += new System.EventHandler(this.lblLowcase_Click);
+
             // 
             // lblSpecialChar
             // 

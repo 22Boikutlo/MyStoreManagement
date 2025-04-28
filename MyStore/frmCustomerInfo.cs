@@ -100,7 +100,7 @@ namespace MyStore
             this.Close();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void label4Click(object sender, EventArgs e)
         {
             int _intLength = lblCreatePassword.Text.Length;
             if(_intLength <7)
@@ -115,7 +115,7 @@ namespace MyStore
 
         }
 
-        private void lblSpecialChar_Click(object sender, EventArgs e)
+        private void lblSpecialCharacter(object sender, EventArgs e)
         {
             Boolean _boolCharChecker = _ConnectOpener.charCheck(txtPassword.Text);
             if(_boolCharChecker == false)
@@ -128,29 +128,41 @@ namespace MyStore
             }
         }
 
-       
-        private void lblLowcase_Click(object sender, EventArgs e)
+        private void lblLowCase(object sender, EventArgs e)
         {
-            Boolean _boolUpperCase = checkUpper(txtPassword.Text);
-            if(_boolUpperCase == true)
+            Boolean _boolLowerCase = checkUpper(txtPassword.Text) ;
+            if(_boolLowerCase ==false)
             {
-                lblUpCase.ForeColor = Color.Green;
+                MessageBox.Show("Your password should consist of lowercase","Lowercase Required",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Password should contain uppercase letter", "Uppercase required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblLowcase.ForeColor = Color.Green;
             }
         }
         public Boolean checkUpper(string _strInput)
         {
-            foreach (char c in _strInput)
+            foreach(char c in _strInput)
             {
-                if (char.IsUpper(c))
+                if(char.IsUpper(c))
                 {
                     return true;
                 }
             }
             return false;
+        }
+
+        private void lblUpperCase(object sender, EventArgs e)
+        {
+            Boolean _boolUpperCase = checkUpper(txtPassword.Text);
+            if (_boolUpperCase == true)
+            {
+                lblUpCase.ForeColor = Color.Green;
+            }
+            else
+            {
+                MessageBox.Show("Your password should consist of uppercase", "Uppercase Required", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
