@@ -285,7 +285,7 @@
             this.lblNumOfCharacters.Size = new System.Drawing.Size(223, 17);
             this.lblNumOfCharacters.TabIndex = 28;
             this.lblNumOfCharacters.Text = "Must Contain at least 8 characters";
-            this.lblNumOfCharacters.Click += new System.EventHandler(this.label4Click);
+       
             // 
             // lblNums
             // 

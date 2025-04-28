@@ -16,9 +16,9 @@ namespace MyStore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmLandingPage());
+            Application.Run(new frmLandingPage());
             //Application.Run(new frmLogIn());
-            Application.Run(new frmCustomerInfo());
+            //Application.Run(new frmCustomerInfo());
         }
     }
 }

@@ -141,7 +141,7 @@ namespace MyStore
         public Boolean charCheck(String TextBox)
         {
             Boolean _characterCondition = false;
-            if (TextBox.Contains("'") | TextBox.Contains(">") | TextBox.Contains(",") | TextBox.Contains("!") | TextBox.Contains("&")
+            if (TextBox.Contains("'") | TextBox.Contains(">") | TextBox.Contains(",") | TextBox.Contains("!") | TextBox.Contains("&") | TextBox.Contains("@")
                 | TextBox.Contains("*") | TextBox.Contains("-") | TextBox.Contains("=") | TextBox.Contains("+")
                 | TextBox.Contains("~") | TextBox.Contains("!") | TextBox.Contains("#") | TextBox.Contains("<") | TextBox.Contains("`") | TextBox.Contains("%")
                 | TextBox.Contains("^") | TextBox.Contains("$") | TextBox.Contains("%") | TextBox.Contains("^") | TextBox.Contains("$"))
